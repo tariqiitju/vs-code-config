@@ -1,0 +1,11 @@
+{
+	"knight direction": {
+		"scope": "c++,cpp,cc",
+		"prefix": "knightdirection",
+		"body": [
+			"int ${1:dx}[]={-2,-2,2,2,1,1,-1,-1};",
+			"int ${2:dy}[]={1,-1,1,-1,2,-2,2,-2};"
+		],
+		"description": ""
+	}
+}

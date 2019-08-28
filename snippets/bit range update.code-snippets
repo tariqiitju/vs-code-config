@@ -1,0 +1,30 @@
+{
+	"bit range update": {
+		"scope": "c++,cpp,cc",
+		"prefix": "bit range update",
+		"body": [
+			"const int M=1e5 + 2;",
+			"int tree[2][M];                        //care full with types everywhere [sum return type]",
+			"inline void _add(int id,int i,int v){",
+			"    for(;i<=N;i+=(i&-i))",
+			"        tree[id][i]+=v;",
+			"}",
+			"inline int _sum(int id,int i){",
+			"    int s=0;",
+			"    for(;i;i^=(i&-i))",
+			"        s+=tree[id][i];",
+			"    return s;",
+			"}",
+			"inline int Sum(int i){",
+			"    return _sum(0,i)*i - _sum(1,i);",
+			"}",
+			"inline void update(int l,int r,int v){//add v with every element from l to r",
+			"    _add(0,l,v);",
+			"    _add(0,r+1,-v);",
+			"    _add(1,l,v*(l-1));",
+			"    _add(1,r+1,-v*r);",
+			"}"
+		],
+		"description": ""
+	}
+}

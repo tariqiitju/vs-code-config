@@ -1,0 +1,20 @@
+{
+	"pbds map": {
+		"scope": "c++,cpp,cc",
+		"prefix": "pbds map",
+		"body": [
+			"#include <ext/pb_ds/assoc_container.hpp>     //Common file",
+			"using namespace __gnu_pbds;",
+			"typedef tree<",
+			"int,                                        //Data Type",
+			"int,                                        //Mapped Type",
+			"less<int>,                                    //Data type",
+			"rb_tree_tag,",
+			"tree_order_statistics_node_update>",
+			"Map;                                        //Ordered Map",
+			"//order_of_key(x) -- number of element LESS THAN x",
+			"//find_by_order(i) -- i'th element in sorted order (0 based indexing)"
+		],
+		"description": ""
+	}
+}

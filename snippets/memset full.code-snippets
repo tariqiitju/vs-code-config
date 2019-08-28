@@ -1,0 +1,10 @@
+{
+	"memset full": {
+		"scope": "c++,cpp,cc",
+		"prefix": "mem",
+		"body": [
+			"memset(${1:a},${2:-1},sizeof(${1:a}));"
+		],
+		"description": ""
+	}
+}

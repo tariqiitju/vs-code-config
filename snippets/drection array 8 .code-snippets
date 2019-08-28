@@ -1,0 +1,11 @@
+{
+	"drection array 8 ": {
+		"scope": "c++,cpp,cc",
+		"prefix": "direction8",
+		"body": [
+			"int ${1:dx}[]={0,0,1,-1,1,1,-1,-1};",
+			"int ${2:dy}[]={1,-1,0,0,1,-1,1,-1};"
+		],
+		"description": ""
+	}
+}

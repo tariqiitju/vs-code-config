@@ -1,0 +1,10 @@
+{
+	"memset size": {
+		"scope": "c++,cpp,cc",
+		"prefix": "mem1",
+		"body": [
+			"memset(${1:a},${2:-1},${3:n}*sizeof(${1:a}[0]));"
+		],
+		"description": ""
+	}
+}

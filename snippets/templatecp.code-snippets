@@ -1,0 +1,43 @@
+{
+	"cp template": {
+		"scope": "cpp,c++,cc",
+		"prefix": "templatecp",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"#define pf                  printf",
+			"#define sc                  scanf",
+			"#define pb                  push_back",
+			"#define eb                  emplace_back",
+			"#define present(c,x)        ((c).find(x) != (c).end())",
+			"#define mp                  make_pair",
+			"#define xx                  first",
+			"#define yy                  second",
+			"#define endl                '\\n'",
+			"#define SZ(v)               ((int) (v).size())",
+			"#define all(v)              (v).begin(), (v).end()",
+			"typedef long long           ll;",
+			"typedef long double         LD;",
+			"typedef unsigned long long  ull;",
+			"typedef pair<int,int>       pii;",
+			"const LD EPS =              1e-9;",
+			"const LD PI=                acos(-1.0);",
+			"const int MX=               6e5+5;",
+			"ll mod=                     1e9+7;",
+			"",
+			"int main()",
+			"{",
+			"    return 0;",
+			"}",
+			"",
+			"/**",
+			"                     Md. Tariqul Islam",
+			"                          IIT,JU",
+			"                      fb/tariqiitju",
+			"                    tarik.amtoly@gmail.com",
+			"*/"
+			
+		],
+		"description": "basic cp template"
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"seive": {
+		"scope": "c++,cpp,cc",
+		"prefix": "seive",
+		"body": [
+			"const int Max = 1e6;",
+			"bool vis[Max+1];",
+			"ll primes[Max];",
+			"int pl;",
+			"inline void sieve(){",
+			"    for(int i = 4;i<=Max;i+=2)",
+			"        vis[i] = 1;",
+			"    for(int i = 3;i*i<=Max;i+=2){//carefull with int i",
+			"        if(!vis[i]){",
+			"            for(int j = i*i; j<= Max; j+=i+i)//carefull with i*i",
+			"                vis[j] = 1;",
+			"        }",
+			"    }",
+			"    primes[0] = 2;",
+			"    pl = 1;",
+			"    for(int i = 3;i<=Max;i+=2)",
+			"        if(!vis[i])",
+			"            primes[pl++] = i;",
+			"}"
+		],
+		"description": ""
+	}
+}

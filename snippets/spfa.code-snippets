@@ -1,0 +1,34 @@
+{
+	"spfa": {
+		"scope": "c++,cpp,cc",
+		"prefix": "spfa",
+		"body": [
+			"vector<int> adj[MX] , cst[MX];",
+			"const int inf = 1e9;",
+			"void spfa(int u ,int n,int *d){",
+			"    for(int i = 0;i<=n;i++)d[i] = inf;",
+			"    vector<bool> vis(n+1,0);",
+			"    queue<int> q;",
+			"    q.push(u);",
+			"    vis[u] = 1;",
+			"    d[u] = 0;",
+			"    while(not q.empty()){",
+			"        u = q.front();q.pop();",
+			"        vis[u] = 0;",
+			"        for(int i = 0;i < SZ(adj[u]);i++){",
+			"            int v = adj[u][i];",
+			"            int c = cst[u][i];",
+			"            if(d[v] > d[u] + c){",
+			"                d[v] = d[u] + c;",
+			"                if(!vis[v]){",
+			"                    vis[v] = 1;",
+			"                    q.push(v);",
+			"                }",
+			"            }",
+			"        }",
+			"    }",
+			"}"
+		],
+		"description": ""
+	}
+}

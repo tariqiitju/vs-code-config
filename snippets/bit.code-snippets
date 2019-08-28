@@ -1,0 +1,30 @@
+{
+	"bit": {
+		"scope": "c++,cpp,cc",
+		"prefix": "binary indexed tree bit",
+		"body": [
+			"const int M=1e5 + 2;",
+			"int bit[M],N;                //Be carefull with types to avoid overflow",
+			"inline void add(int i,int v){///a[i] = v + a[i]",
+			"    for(;i<=N;i+=(i&-i))",
+			"        bit[i]+=v;",
+			"}",
+			"inline int sum(int i){//=sum{a[j],1 <= j <=i}",
+			"    int s=0;",
+			"    for(;i;i^=(i&-i))",
+			"        s+=bit[i];",
+			"    return s;",
+			"}",
+			"inline int select(int k){//return smallest i such sum(i) >= k",
+			"    int h=0;",
+			"    for(int i=(1<<(int)floor(log2((N))));i;i>>=1){",
+			"        if(h + i > N)continue;",
+			"        if(bit[h+i]<k)",
+			"             k-=bit[h+i] , h+=i;",
+			"    }",
+			"    return h+1;",
+			"}"
+		],
+		"description": ""
+	}
+}

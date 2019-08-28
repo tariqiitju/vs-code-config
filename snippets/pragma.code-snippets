@@ -1,0 +1,13 @@
+{
+	"pragma": {
+		"scope": "c++,cpp,cc",
+		"prefix": "pragma",
+		"body": [
+			"#pragma GCC optimize("Ofast")",
+			"#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")//com error",
+			"#pragma GCC optimize("unroll-loops")",
+			""
+		],
+		"description": ""
+	}
+}

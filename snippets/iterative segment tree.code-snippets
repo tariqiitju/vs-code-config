@@ -1,0 +1,30 @@
+{
+	"iterative segment tree": {
+		"scope": "c++,cpp,cc",
+		"prefix": "iterative segment tree",
+		"body": [
+			"struct RMQ{",
+			"    typedef int T;                //Data type , No mod , sum query",
+			"    vector <T> t;",
+			"    int n;",
+			"    RMQ(vector<T> &a){",
+			"        n = (int)a.size();",
+			"        t.resize(2*n);",
+			"        for(int i = 0; i < n; i++) t[n + i] = a[i];",
+			"        for(int i = n - 1; i > 0; --i) t[i] = t[i << 1] + t[i << 1 | 1];",
+			"    }",
+			"    void modify(int p, T v) {    //point update , assignment",
+			"            for(t[p += n] = v; p > 1; p >>= 1) t[p >> 1] = t[p] + t[p ^ 1];",
+			"    }",
+			"    int query(int l, int r) { T res = 0;",
+			"            for(l += n, r += n; l < r; l >>= 1, r >>= 1) {",
+			"                    if(l & 1) res += t[l++];",
+			"                    if(r & 1) res += t[--r];",
+			"            }",
+			"            return res;",
+			"    }",
+			"};"
+		],
+		"description": ""
+	}
+}

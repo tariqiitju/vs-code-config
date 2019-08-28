@@ -1,0 +1,28 @@
+{
+	"generator": {
+		"scope": "c++,cpp,cc",
+		"prefix": "generator in python",
+		"body": [
+			"def generator(p):",
+			"    phi=p-1",
+			"    n=p-1",
+			"    i=2",
+			"    fact=[]",
+			"    while i*i<=n:",
+			"        if n%i==0:",
+			"            while n%i==0:",
+			"                n//=i",
+			"            fact.append(i)",
+			"        i+=1",
+			"    if n>1:fact.append(n)",
+			"    for r in range(2,p+1):",
+			"        ok=True",
+			"        for q in fact:",
+			"            ok = ok and pow(r,phi//q,p)!=1",
+			"            if not ok :break",
+			"        if ok : return r",
+			"    return -1"
+		],
+		"description": ""
+	}
+}

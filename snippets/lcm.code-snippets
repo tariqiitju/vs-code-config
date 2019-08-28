@@ -1,0 +1,12 @@
+{
+	"lcm": {
+		"scope": "c++,cpp,cc",
+		"prefix": "lcm",
+		"body": [
+			"template <class T> T lcm(T a, T b){",
+			"    return (a/__gcd(a,b))*b;",
+			"}"
+		],
+		"description": ""
+	}
+}

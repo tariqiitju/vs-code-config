@@ -1,0 +1,27 @@
+{
+	"lca": {
+		"scope": "c++,cpp,cc",
+		"prefix": "lca sparse table",
+		"body": [
+			"    //sp[0][u] = parent of u int the tree, sp[0][root] = 0 , assuming node numbered from 1,n",
+			"    for(int j = 1; (1<<j) < n; j++){",
+			"        for(int i = 1; i <=n; i++){",
+			"            sp[j][i] = sp[j-1][sp[j-1][i]];",
+			"        }",
+			"    }",
+			"    //lca of u and v , lev[u] = count level , level of root is 1",
+			"    if(lev[u] > lev[v])swap(u,v);",
+			"    if(lev[v] > lev[u])",
+			"        for(int k = floor(log2(lev[v] - lev[u]));k>=0;k--)",
+			"            if(lev[sp[k][v]] >= lev[u])v=sp[k][v];",
+			"    if(u!=v){",
+			"        for(int k = floor(log2(lev[v]));k>=0;k--)",
+			"            if(sp[k][v]!=sp[k][u])",
+			"                u = sp[k][u], v = sp[k][v];",
+			"        v = u = sp[0][u];",
+			"    }",
+			"    //u and v is equal now and they are the lca"
+		],
+		"description": ""
+	}
+}

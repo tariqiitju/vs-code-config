@@ -1,0 +1,26 @@
+{
+	"sparse table": {
+		"scope": "c++,cpp,cc",
+		"prefix": "sparse table",
+		"body": [
+			"const int MX=               6e5+5;",
+			"const int LOGN =             20;//2^LOGN > N",
+			"typedef int T;",
+			"inline void build(T a[LOGN][MX],T * v,int n){ //array declared as int spt[LOGN][MX]",
+			"    for(int i=0;i<n;i++)",
+			"        a[0][i] = v[i];",
+			"    for(int j = 1;(1<<j) <= n; j++){",
+			"        for(int i = 0;i + (1<<j) <= n; i++){",
+			"            a[j][i] = min(a[j-1][i] , a[j-1][i + (1 << (j - 1) )]);",
+			"        }",
+			"    }",
+			"}",
+			"inline T query(int l,int r){",
+			"    int j = floor(log2(r-l+1));",
+			"    return min(TableName[j][l],TableName[j][r + 1 - (1 << j)]);//replace table name here",
+			"}",
+			""
+		],
+		"description": ""
+	}
+}

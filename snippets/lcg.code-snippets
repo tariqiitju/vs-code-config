@@ -1,0 +1,16 @@
+{
+	"lcg": {
+		"scope": "c++,cpp,cc",
+		"prefix": "random",
+		"body": [
+			"///Random Number generator",
+			"ull __SEED=3;",
+			"ull __MULTI=6364136223846793005ULL;",
+			"ull __INC=1442695040888963407ULL;",
+			"ull lcg(){return __SEED=__SEED* __MULTI+ __INC;}",
+			"template<class _T>inline _T random(_T L,_T R){return lcg()%(R-L+1)+L;}",
+			""
+		],
+		"description": ""
+	}
+}

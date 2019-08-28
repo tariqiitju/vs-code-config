@@ -1,0 +1,11 @@
+{
+	"direction array side": {
+		"scope": "c++,cpp,cc",
+		"prefix": "directionside",
+		"body": [
+			"int ${1:dx}[]={0,0,1,-1};",
+			"int ${2:dy}[]={1,-1,0,0};"
+		],
+		"description": ""
+	}
+}

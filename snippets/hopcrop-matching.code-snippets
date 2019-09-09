@@ -91,7 +91,7 @@
 			"{",
 			"    for(int i=1;i<=_n;i++)",
 			"    {",
-			"        if(_match[i])printf("%d < -- > %d\\n",i,_match[i]);",
+			"        if(_match[i])printf(\"%d < -- > %d\\n\",i,_match[i]);",
 			"    }",
 			"}",
 			"",

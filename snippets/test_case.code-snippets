@@ -3,7 +3,7 @@
 		"scope": "c++,cpp,cc",
 		"prefix": "testcase",
 		"body": [
-			"cout<<"Case "<<++${1:case_no}<<":""
+			"cout<<\"Case \"<<++${1:case_no}<<\":\""
 		],
 		"description": ""
 	}

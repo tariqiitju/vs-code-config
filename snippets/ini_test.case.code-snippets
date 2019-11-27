@@ -1,0 +1,12 @@
+{
+	"ini_test_case": {
+		"scope": "c++,cpp,cc",
+		"prefix": "int tc,case_no=0",
+		"body": [
+			"int tc,case_no=0;cin>>tc;while(tc--){",
+			"",
+			"}"
+		],
+		"description": ""
+	}
+}

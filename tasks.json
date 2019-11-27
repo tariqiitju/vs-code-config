@@ -88,6 +88,30 @@
         },
         {
             "type": "shell",
+            "label": "gcc file IO",
+            "command": "./runner",
+            "args": [
+                "${file}",
+                "0",
+                "1",
+                "1"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
             "label": "g++14 file input",
             "command": "./runner",
             "args": [
@@ -112,7 +136,7 @@
         {
             "type": "shell",
             "label": "python",
-            "command": "python",
+            "command": "python3",
             "args": [
                 "${file}"
             ],
@@ -133,7 +157,7 @@
         {
             "type": "shell",
             "label": "python file IO",
-            "command": "python",
+            "command": "python3",
             "args": [
                 "${file}",
                 "<input.txt>output.txt"
@@ -155,10 +179,34 @@
         {
             "type": "shell",
             "label": "python file input",
-            "command": "python",
+            "command": "python3",
             "args": [
                 "${file}",
                 "<input.txt"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "g++14-b file IO",
+            "command": "./runner-b",
+            "args": [
+                "${file}",
+                "14",
+                "1",
+                "1"
             ],
             "presentation": {
                 "echo": true,

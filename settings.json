@@ -1,0 +1,32 @@
+{
+    "files.associations": {
+        "array": "cpp",
+        "bitset": "cpp",
+        "string_view": "cpp",
+        "initializer_list": "cpp",
+        "regex": "cpp",
+        "utility": "cpp",
+        "valarray": "cpp",
+        "iostream": "cpp",
+        "vector": "cpp",
+        "memory": "cpp",
+        "optional": "cpp",
+        "system_error": "cpp",
+        "thread": "cpp",
+        "typeindex": "cpp",
+        "hash_map": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "*.tcc": "cpp",
+        "ostream": "cpp",
+        "random": "cpp",
+        "chrono": "cpp",
+        "limits": "cpp"
+    },
+    "editor.fontSize": 17,
+    "editor.defaultFormatter": "vscode.configuration-editing"
+}
